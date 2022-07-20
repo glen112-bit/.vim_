@@ -1,0 +1,301 @@
+""++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+"                                                                              "
+"                       __   _ _ _ __ ___  _ __ ___                            "
+"                       \ \ / / | '_ ` _ \| '__/ __|                           "
+"                        \ V /| | | | | | | | | (__                            "
+"                         \_/ |_|_| |_| |_|_|  \___|                           "
+"                                                                              "
+"                                                                              "
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+"let $vundle=$vimhome."/bundle/Vundle.vim"
+" Be iMproved
+"=====================================================
+" Plug settings
+"=====================================================
+
+" let g:polyglot_disabled = ['markdown']
+call plug#begin()
+Plug 'https://github.com/leafgarland/typescript-vim'
+Plug 'https://github.com/Quramy/vim-js-pretty-template'
+Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
+
+Plug 'sheerun/vim-polyglot'
+
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'mhinz/vim-startify'
+Plug 'fleischie/vim-styled-components', { 'branch': 'main' }
+"Plug 'jparise/vim-graphql'
+"-------------------=== Code/Project navigation ===-------------
+Plug 'scrooloose/nerdtree'                " Project and file navigation
+"    Plug 'majutsushi/tagbar'                  " Class/module browser
+"    Plug 'kien/ctrlp.vim'j                     " Fast transitions on project files
+Plug 'fleischie/vim-styled-components'
+"-------------------=== Other ===-------------------------------
+"    Plug 'fisadev/FixedTaskList.vim'          " Pending tasks list
+Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
+Plug 'vim-airline/vim-airline-themes'     " Themes for airline
+" Plug 'Lokaltog/powerline'                 " Powerline fonts plugin
+Plug 'rosenfeld/conque-term'              " Consoles as buffers
+Plug 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
+Plug 'flazz/vim-colorschemes'             " Colorschemes
+" Plug 'michaeljsmith/vim-indent-object'
+"Plug 'sbdchd/neoformat'
+"-------------------=== Snippets support ===--------------------
+"Plug 'garbas/vim-snipmate'                " Snippets manager
+"Plug 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
+"Plug 'tomtom/tlib_vim'                    " dependencies #2
+Plug 'honza/vim-snippets'                 " snippets repo
+Plug 'SirVer/ultisnips'
+
+"-------------------=== Languages support ===-------------------
+Plug 'tpope/vim-commentary'               " Comment stuff out
+"Plug 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
+"Plug 'Rykka/riv.vim'                      " ReStructuredText plugin
+"Plug 'Valloric/YouCompleteMe'             " Autocomplete plugin
+Plug 'Yggdroot/indentLine'
+"-------------------=== Python  ===-----------------------------
+"Plug 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
+"Plug 'scrooloose/syntastic'               " Syntax checking plugin for Vim
+"Plug 'git nerdtree'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'airblade/vim-gitgutter'
+"Plug 'roxma/nvim-completion-manager'
+Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'terryma/vim-multiple-cursors'
+"Plug 'sheerun/vimrc'
+Plug 'easymotion/vim-easymotion'
+ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/neco-syntax'  " Fuente general de auto completado
+" Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+" Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'mxw/vim-jsx'
+Plug 'vim-scripts/Emmet.vim'
+"    Plug 'vim-scripts/WebAPI.vim'
+Plug 'christoomey/vim-tmux-navigator'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"    Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'eslint/eslint'
+Plug 'dense-analysis/ale'
+Plug 'mhinz/vim-signify'
+Plug 'w0rp/ale' "muestra errores
+" Use release branch (recommend)
+" " Use release branch (recommend)
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Or build from source code by using yarn: https://yarnpkg.com
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-eslint'
+"Or build from source code by using yarn: https://yarnpkg.com
+"Plug 'dense-analysis/ale'
+Plug 'preservim/nerdcommenter'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
+
+"Autocomplete
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'mhartington/oceanic-netx/'
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+"
+"----------------Typescript----------------------------"
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'jparise/vim-graphql'        " GraphQL syntax
+
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
+" Plug 'ryanolsonx/vim-lsp-typescript'
+Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/vim-lsp'
+
+" Plug 'ryanolsonx/vim-lsp-typescript'
+
+Plug 'prettier/vim-prettier', {
+ \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'branch': 'release/0.x'
+  \ }
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+"http req
+Plug 'nvim-lua/plenary.nvim'
+
+
+call plug#end()                           " required
+let mapleader=" "
+
+"tmux
+so ~/.vim/extras/tmux.vim
+"maps
+so ~/.vim/extras/maps.vim
+"tsscript
+so ~/.vim/extras/tsscrip.vim
+"git
+so ~/.vim/extras/git.vim
+"indent
+so ~/.vim/extras/indent.vim
+"ale
+so ~/.vim/extras/ale.vim
+"coc
+so ~/.vim/extras/coc.vim
+"emmet
+so ~/.vim/extras/emmet.vim 
+"python
+so ~/.vim/extras/python.vim
+"syntastic
+so ~/.vim/extras
+"nerd
+so ~/.vim/extras/nerd.vim
+"php
+so ~/.vim/extras/php.vim
+
+
+"command Exec set splitright | vnew | set filetype=sh | read !sh #
+command Exec set splitbelow | new | set filetype=sh | read !sh #
+
+
+"kite
+let g:kite_supported_languages = ['python', 'javascript', 'go']
+
+
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger=".."
+let g:user_emmet_leader_key=',,'
+
+set cursorline
+set foldmethod=syntax
+set foldlevel=99
+
+
+filetype indent on
+
+syntax on
+set nocompatible
+set history=5000
+set autoindent 
+set smartindent
+set smarttab
+set showcmd
+set autoread
+set backspace=indent,eol,start
+set backupdir=/tmp//,.
+set clipboard=unnamedplus,unnamed
+set colorcolumn=80
+
+set number
+set relativenumber
+set backspace=2
+set mouse=a
+set numberwidth=1
+set clipboard=unnamed
+syntax enable
+set showcmd
+set ruler
+set encoding=UTF-8
+set showmatch
+set expandtab
+set smartcase
+set sw=2 ts=2 sts=4
+set path=.,,**
+set laststatus=2
+set wildmenu
+set confirm
+set hidden
+set incsearch
+
+set foldmethod=syntax
+set foldlevel=99
+set noshowmode
+set hidden
+
+
+
+set filetype
+filetype on
+filetype plugin on
+filetype plugin indent on
+" set smartindent
+
+"autocmd BufRead,BufWritePre *.sh normal gg=G
+
+set autoindent
+
+
+"set ai
+"set si
+"set shiftwidth=4
+"set cindent
+"set pastetoggle=yy
+
+
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" ================================================================
+" vim-airline
+" ================================================================
+" update airline to use solarized
+
+let g:airline_theme='sulphurpool'
+
+colorscheme gruvbox 
+
+let g:gruvbox_contrast_dark = "hard"
+let g:airline#extensions#tabline#enabled = 1 
+let g:gruvbox_hls_cursor = "bg3"
+let g:gruvbox_color_column = "bg2"
+let g:jupyter_mapkeys = 0
+
+"command! -bang -bar -nargs=* Gpush execute 'Dispatch<bang> -dir=' .
+"      \ fnameescape(FugitiveGitDir()) 'git push' <q-args>
+"command! -bang -bar -nargs=* Gfetch execute 'Dispatch<bang> -dir=' .
+"     \ fnameescape(FugitiveGitDir()) 'git fetch' <q-args>
+
+
+"set incommand=split
+
+"let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.snippets_custom.json')), "\n"))
+
+"let g:user_emmet_settings = webapi#json#decode(
+"\  join(readfile(expand('~/.snippets.json')), "\n"))
+
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif

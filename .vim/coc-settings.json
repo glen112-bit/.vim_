@@ -1,0 +1,23 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "graphql",
+    "html",
+    "html5"
+  ],
+  "prettier.tabWidth": 2,
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 80,
+  "prettier.semi": true,
+  "eslint.packageManager": "yarn",
+  "eslint.nodePath": ".yarn/sdks",
+  "workspace.workspaceFolderCheckCwd": false,
+  "tsserver.tsdk": ".yarn/sdks/typescript/lib"
+}
