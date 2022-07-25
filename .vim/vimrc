@@ -1,4 +1,4 @@
-""++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+" nt"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "                                                                              "
 "                       __   _ _ _ __ ___  _ __ ___                            "
 "                       \ \ / / | '_ ` _ \| '__/ __|                           "
@@ -7,7 +7,7 @@
 "                                                                              "
 "                                                                              "
 "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-"let $vundle=$vimhome."/bundle/Vundle.vim"
+"let $vundle=$vimhome."/bundle/V:undle.vim"
 " Be iMproved
 "=====================================================
 " Plug settings
@@ -18,82 +18,53 @@ call plug#begin()
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'https://github.com/Quramy/vim-js-pretty-template'
 Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
-
+Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
-
+" Plug 'janko/vim-test'
+Plug 'David-Kunz/jester'
+Plug 'vim-test/vim-test'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'mhinz/vim-startify'
 Plug 'fleischie/vim-styled-components', { 'branch': 'main' }
-"Plug 'jparise/vim-graphql'
 "-------------------=== Code/Project navigation ===-------------
 Plug 'scrooloose/nerdtree'                " Project and file navigation
-"    Plug 'majutsushi/tagbar'                  " Class/module browser
-"    Plug 'kien/ctrlp.vim'j                     " Fast transitions on project files
 Plug 'fleischie/vim-styled-components'
+Plug 'neoclide/coc-jest'
 "-------------------=== Other ===-------------------------------
-"    Plug 'fisadev/FixedTaskList.vim'          " Pending tasks list
-Plug 'bling/vim-airline'                  " Lean & mean status/tabline for vim
-Plug 'vim-airline/vim-airline-themes'     " Themes for airline
-" Plug 'Lokaltog/powerline'                 " Powerline fonts plugin
+Plug 'vim-airline/vim-airline'                  " Lean & mean status/tabline for vim
+Plug 'vim-airline/vim-airline-themes'
 Plug 'rosenfeld/conque-term'              " Consoles as buffers
 Plug 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
 Plug 'flazz/vim-colorschemes'             " Colorschemes
-" Plug 'michaeljsmith/vim-indent-object'
-"Plug 'sbdchd/neoformat'
 "-------------------=== Snippets support ===--------------------
-"Plug 'garbas/vim-snipmate'                " Snippets manager
-"Plug 'MarcWeber/vim-addon-mw-utils'       " dependencies #1
-"Plug 'tomtom/tlib_vim'                    " dependencies #2
 Plug 'honza/vim-snippets'                 " snippets repo
 Plug 'SirVer/ultisnips'
 
 "-------------------=== Languages support ===-------------------
 Plug 'tpope/vim-commentary'               " Comment stuff out
-"Plug 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
-"Plug 'Rykka/riv.vim'                      " ReStructuredText plugin
-"Plug 'Valloric/YouCompleteMe'             " Autocomplete plugin
 Plug 'Yggdroot/indentLine'
 "-------------------=== Python  ===-----------------------------
-"Plug 'klen/python-mode'                   " Python mode (docs, refactor, lints...)
-"Plug 'scrooloose/syntastic'               " Syntax checking plugin for Vim
-"Plug 'git nerdtree'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'airblade/vim-gitgutter'
-"Plug 'roxma/nvim-completion-manager'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
-"Plug 'sheerun/vimrc'
 Plug 'easymotion/vim-easymotion'
- Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'Shougo/neco-syntax'  " Fuente general de auto completado
-" Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-" Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-" Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'mxw/vim-jsx'
 Plug 'vim-scripts/Emmet.vim'
-"    Plug 'vim-scripts/WebAPI.vim'
 Plug 'christoomey/vim-tmux-navigator'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"    Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'eslint/eslint'
 Plug 'dense-analysis/ale'
 Plug 'mhinz/vim-signify'
 Plug 'w0rp/ale' "muestra errores
-" Use release branch (recommend)
-" " Use release branch (recommend)
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Or build from source code by using yarn: https://yarnpkg.com
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-eslint'
-"Or build from source code by using yarn: https://yarnpkg.com
-"Plug 'dense-analysis/ale'
 Plug 'preservim/nerdcommenter'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -103,10 +74,8 @@ Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 
 "Autocomplete
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Typescript
 Plug 'leafgarland/typescript-vim'
-Plug 'mhartington/oceanic-netx/'
+" Plug 'mhartington/oceanic-netx/'
 Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 "
 "----------------Typescript----------------------------"
@@ -118,12 +87,7 @@ Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
-" Plug 'ryanolsonx/vim-lsp-typescript'
 Plug 'prabirshrestha/async.vim'
-" Plug 'prabirshrestha/vim-lsp'
-
-" Plug 'ryanolsonx/vim-lsp-typescript'
-
 Plug 'prettier/vim-prettier', {
  \ 'do': 'yarn install --frozen-lockfile --production',
   \ 'branch': 'release/0.x'
@@ -133,8 +97,12 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 "http req
 Plug 'nvim-lua/plenary.nvim'
 
+let g:coc_global_extensions=[ 'coc-jest', 'coc-css', 'coc-pairs', 'coc-eslint', 'coc-stylelintplus', 'coc-cssmodules', 'coc-docker', 'coc-eslint8', 'coc-json', 'coc-html', 'coc-prettier', 'coc-tsserver', 'coc-yaml', 'coc-emmet', 'coc-vimlsp',]
 
 call plug#end()                           " required
+
+" Use homebrew's clangd
+let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
 let mapleader=" "
 
 "tmux
@@ -156,11 +124,13 @@ so ~/.vim/extras/emmet.vim
 "python
 so ~/.vim/extras/python.vim
 "syntastic
-so ~/.vim/extras
+so ~/.vim/extras/syntastic.vim
 "nerd
 so ~/.vim/extras/nerd.vim
 "php
 so ~/.vim/extras/php.vim
+"airline
+so ~/.vim/extras/airline.vim
 
 
 "command Exec set splitright | vnew | set filetype=sh | read !sh #
@@ -246,17 +216,10 @@ set autoindent
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 
-" ================================================================
-" vim-airline
-" ================================================================
-" update airline to use solarized
-
-let g:airline_theme='sulphurpool'
-
 colorscheme gruvbox 
 
 let g:gruvbox_contrast_dark = "hard"
-let g:airline#extensions#tabline#enabled = 1 
+
 let g:gruvbox_hls_cursor = "bg3"
 let g:gruvbox_color_column = "bg2"
 let g:jupyter_mapkeys = 0
