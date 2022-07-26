@@ -1,0 +1,13 @@
+
+let g:javascript_conceal_function             = "Ä"
+let g:javascript_conceal_null                 = "¿"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "?"
+let g:javascript_conceal_undefined            = "À"
+let g:javascript_conceal_NaN                  = "?"
+let g:javascript_conceal_prototype            = "¦"
+let g:javascript_conceal_static               = "¥"
+let g:javascript_conceal_super                = "½"
+let g:javascript_conceal_arrow_function       = "?"
+let g:javascript_conceal_noarg_arrow_function = "??"
+let g:javascript_conceal_underscore_arrow_function = "??"
