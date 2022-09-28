@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@eslint/create-config": "^0.3.0",
+    "create-vite": "^2.9.4",
+    "expo-cli": "^5.4.11",
+    "live-server": "^1.2.2",
+    "yarn-add-no-save": "^1.0.3"
+  }
+}
