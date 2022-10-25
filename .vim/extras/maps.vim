@@ -1,5 +1,8 @@
 nmap <leader>t <Plug>PlenaryTestFile
-
+"compare files 
+nmap <leader>com :SignifyDiff[]<CR>
+"sifnify 
+nmap <leader>sig :au signify<CR>
 
 nmap <leader>s <Plug>(easymotion-s2)
 nmap <leader>nt :NERDTreeFind<CR>

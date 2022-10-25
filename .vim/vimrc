@@ -1,4 +1,4 @@
-" nt"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 "                                                                              "
 "                       __   _ _ _ __ ___  _ __ ___                            "
 "                       \ \ / / | '_ ` _ \| '__/ __|                           "
@@ -15,16 +15,23 @@
 
 " let g:polyglot_disabled = ['markdown']
 call plug#begin()
-Plug 'https://github.com/Quramy/vim-js-pretty-template'
-Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-fugitive'
+" Plug 'junegunn/gv.vim'
+" Plug 'preservim/nerdtree' |
+" \ Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+" Plug 'https://github.com/Quramy/vim-js-pretty-template'
+" Plug 'yaegassy/coc-intelephense', {'do': 'yarn install --frozen-lockfile'}
 Plug 'sheerun/vim-polyglot'
 " Plug 'janko/vim-test'
-Plug 'David-Kunzavid-Kunz/jester'
-Plug 'vim-test/vim-test'
-Plug 'peitalin/vim-jsx-typescript'
+" Plug 'David-Kunzavid-Kunz/jester'
+" Plug 'vim-test/vim-test'
+" Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'mhinz/vim-startify'
-Plug 'fleischie/vim-styled-components', { 'branch': 'main' }
+" Plug 'fleischie/vim-styled-components', { 'branch': 'main' }
 "-------------------=== Code/Project navigation ===-------------
 Plug 'scrooloose/nerdtree'                " Project and file navigation
 Plug 'fleischie/vim-styled-components'
@@ -34,6 +41,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rosenfeld/conque-term'              " Consoles as buffers
 Plug 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
 Plug 'flazz/vim-colorschemes'             " Colorschemes
+"-------------------=== Debbug support ===---------------------
+" Plug 'puremourning/vimspector'
 "-------------------=== Snippets support ===--------------------
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'                 " snippets repo
@@ -45,86 +54,91 @@ Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 Plug 'vim-scripts/Emmet.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'eslint/eslint'
 Plug 'dense-analysis/ale'
 Plug 'mhinz/vim-signify'
 Plug 'w0rp/ale' "muestra errores
-
-" Or build from source code by using yarn: https://yarnpkg.com
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc-eslint'
+" Or build from source code by using yarn: https://yarnpkg.com
+" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc-eslint'
 Plug 'preservim/nerdcommenter'
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
 
 Plug 'morhetz/gruvbox'
 Plug 'ryanoasis/vim-devicons'
 
 "Autocomplete
 " Plug 'mhartington/oceanic-netx/'
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+" Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 "----------------Typescript----------------------------"
-Plug 'leafgarland/typescript-vim' " TypeScript syntax
-Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+" Plug 'leafgarland/typescript-vim' " TypeScript syntax
+" Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+" Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/async.vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'roxma/nvim-completion-manager'
 Plug 'prettier/vim-prettier', {
 \ 'do': 'yarn install --frozen-lockfile --production',
 \ 'branch': 'release/0.x'
 \ }
 " post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 "http req
-Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-lua/plenary.nvim'
 
-let g:coc_global_extensions=[ 'coc-jest', 'coc-css', 'coc-pairs', 'coc-eslint', 'coc-stylelintplus', 'coc-cssmodules', 'coc-docker', 'coc-eslint8', 'coc-json', 'coc-html', 'coc-prettier', 'coc-tsserver', 'coc-yaml', 'coc-emmet', 'coc-vimlsp',]
 
 call plug#end()                           " required
 
+let g:coc_global_extensions=[ 'coc-jest', 'coc-css', 'coc-pairs', 'coc-eslint', 'coc-stylelintplus', 'coc-cssmodules', 'coc-docker', 'coc-eslint8', 'coc-json', 'coc-html', 'coc-prettier', 'coc-tsserver', 'coc-yaml', 'coc-emmet', 'coc-vimlsp',]
 " Use homebrew's clangd
 let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
 let mapleader=" "
 
+
+"ale
+so ~/.vim/extras/ale.vim
+"airline
+so ~/.vim/extras/airline.vim
+"debug
+" so ~/.vim/extras/debug.vim
 "tmux
 so ~/.vim/extras/tmux.vim
 "maps
 so ~/.vim/extras/maps.vim
 "tsscript
-" so ~/.vim/extras/tsscrip.vim
+ so ~/.vim/extras/tsscrip.vim
 "git
 so ~/.vim/extras/git.vim
 "indent
 so ~/.vim/extras/indent.vim
-"ale
-" so ~/.vim/extras/ale.vim
 "coc
-so ~/.vim/extras/coc.vim
+ so ~/.vim/extras/coc.vim
 "emmet
 so ~/.vim/extras/emmet.vim 
 "python
 so ~/.vim/extras/python.vim
 "syntastic
-" so ~/.vim/extras/syntastic.vim
+ " so ~/.vim/extras/syntastic.vim
 "nerd
-so ~/.vim/extras/nerd.vim
+ so ~/.vim/extras/nerd.vim
 "php
-so ~/.vim/extras/php.vim
-"airline
-so ~/.vim/extras/airline.vim
+" so ~/.vim/extras/php.vim
+
 "kite
 so ~/.vim/extras/kite.vim
 "ultisnips
@@ -138,7 +152,7 @@ command Exec set splitbelow | new | set filetype=sh | read !sh #
 
 
 
-set filetype
+"set filetype
 filetype on
 filetype plugin on
 filetype plugin indent on

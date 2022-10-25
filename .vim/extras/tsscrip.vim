@@ -30,7 +30,7 @@ let g:coc_global_extensions = [
 " vim-jsx
 " ================================================================
 " allow jsx syntax in .js files
-let g:jsx_ext_required=0
+" let g:jsx_ext_required=0
 
 
 

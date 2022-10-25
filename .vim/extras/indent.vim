@@ -16,7 +16,7 @@ let g:indentLine_setColors = 1
 let g:indentLine_color_term = 239 
 
 " GVim
-let g:indentLine_color_gui = '#b0a3a2'
+let g:indentLine_color_gui = '#404040'
 
 " none X terminal
 let g:indentLine_color_tty_light = 7 " (default: 4)

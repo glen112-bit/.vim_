@@ -1,82 +1,44 @@
-"=====================================================
-"" General settings
-"=====================================================
-"syntax enable                               " syntax highlight
+nnoremap <silent> K :call CocAction('doHover')<CR>
+nnoremap <leader>d :<C-u0>CocList diagnostics<cr>
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
 
-"set backspace=indent,eol,start              " backspace removes all (indents, EOLs, start) What is start?
+function! s:show_hover_doc()
+  call timer_start(500, 'ShowDocIfNoDiagnostic')
+endfunction
 
-"set scrolloff=10                            " let 10 lines before/after cursor during scroll
-
-"set clipboard=unnamed                       " use system clipboard
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-let g:coc_global_extensions=[
-      \ 'coc-css',
-      \ 'coc-pairs',
-      \ 'coc-eslint',
-      \ 'coc-stylelintplus',
-      \ 'coc-cssmodules',
-      \ 'coc-docker',
-      \ 'coc-eslint8',
-      \ 'coc-json',
-      \ 'coc-html',
-      \ 'coc-prettier',
-      \ 'coc-tsserver',
-      \ 'coc-yaml',
-      \ 'coc-emmet',
-      \ 'coc-vimlsp',
-      \ ]
-
-autocmd FileType javascipt let b:coc_suggest_disable=0
-autocmd FileType scss setl iskeyword+=@-@
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-
-"completion
-"if !has('nvim')
-"    Plug 'roxma/vim-hug-neovim-rpc'
-"endif
-
-"--------------------------------------------------------
-"--------------------------------------------------------
-" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
-" unicode characters in the file autoload/float.vim
-set encoding=utf-8
-
-" TextEdit might fail if hidden is not set.
-set hidden
-
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
 
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
-if has("nvim-0.5.0") || has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
+set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -89,11 +51,6 @@ if has('nvim')
 else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
-
-" Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -205,3 +162,6 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+
