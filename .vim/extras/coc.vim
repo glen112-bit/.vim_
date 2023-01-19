@@ -10,6 +10,27 @@ function! s:show_hover_doc()
   call timer_start(500, 'ShowDocIfNoDiagnostic')
 endfunction
 
+
+let g:coc_global_extensions=[ 'coc-jest', 
+                          \    'coc-css',
+                          \    'coc-pairs',
+                          \    'coc-eslint', 
+                          \    'coc-stylelintplus', 
+                          \    'coc-cssmodules', 
+                          \    'coc-docker', 
+                          \    'coc-eslint8', 
+                          \    'coc-json', 
+                          \    'coc-html',
+                          \    'coc-prettier', 
+                          \    'coc-tsserver', 
+                          \    'coc-yaml', 
+                          \    'coc-emmet', 
+                          \    'coc-vimlsp',
+                          \    ]
+
+
+
+
 autocmd CursorHoldI * :call <SID>show_hover_doc()
 autocmd CursorHold * :call <SID>show_hover_doc()
 " Some servers have issues with backup files, see #649.
