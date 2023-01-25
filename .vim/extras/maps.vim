@@ -6,6 +6,7 @@ nmap <leader>sig :au signify<CR>
 
 nmap <leader>s <Plug>(easymotion-s2)
 nmap <leader>nt :NERDTreeFind<CR>
+
 nmap s :w<CR>
 nmap ss :wq<CR>
 nmap 88 :CocCommand eslint.executeAutofix<CR>

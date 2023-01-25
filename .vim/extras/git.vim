@@ -1,5 +1,8 @@
 "git
-
+" This path probably won't work
+" let g:gitgutter_git_executable = 'C:\Program Files\Git\bin\git.exe'
+let g:gitgutter_max_signs = 500  " default value (Vim < 8.1.0614, Neovim < 0.4.0)
+let g:gitgutter_max_signs = -1   " default value (otherwise)
 let g:gitgutter_sign_added = '✚'
 let g:gitgutter_sign_modified = '✹'
 let g:gitgutter_sign_removed = '-'
@@ -18,4 +21,17 @@ nmap [h <Plug>(GitGutterPrevHunk) "same as default
 "nmap ghs <Plug>(GitGutterStageHunk)
 "nmap ghu <Plug>(GitGutterUndoHunk)
 
+" Your vimrc
+function! GitStatus()
+  let [a,m,r] = GitGutterGetHunkSummary()
+  return printf('+%d ~%d -%d', a, m, r)
+endfunction
+set statusline+=%{GitStatus()}
+" vim-gitgutter used to do this by default:
+highlight! link SignColumn LineNr
 
+" or you could do this:
+" highlight SignColumn guibg=whatever ctermbg=whatever
+highlight GitGutterAdd    guifg=#009900 ctermfg=2
+highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+highlight GitGutterDelete guifg=#ff2222 ctermfg=1
