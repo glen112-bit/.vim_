@@ -107,13 +107,13 @@ so ~/.vim/extras/client.vim
 "kite
 so ~/.vim/extras/kite.vim
 "ultisnips
-so ~/.vim/extras/ultisnips.vim
+"so ~/.vim/extras/ultisnips.vim
 "gruvbox
 so ~/.vim/extras/gruvbox.vim
 "vimspector
 so ~/.vim/extras/vimspector.vim
 "snippets
-so ~/.vim/extras/snippets.vim
+"so ~/.vim/extras/snippets.vim
 
 command Exec set splitbelow | new | set filetype=sh | read !sh #
 
