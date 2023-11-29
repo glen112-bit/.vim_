@@ -1,8 +1,7 @@
-nmap <leader>t <Plug>PlenaryTestFile
 "compare files 
 nmap <leader>com :SignifyDiff[]<CR>
 "sifnify 
-nmap <leader>sig :au signify<CR>
+nmap <leader>si :au signify<CR>
 
 nmap <leader>s <Plug>(easymotion-s2)
 nmap <leader>nt :NERDTreeFind<CR>
@@ -30,5 +29,6 @@ map <leader>ob :Buffers<cr>
 "fast scrolling
 noremap <C-j> 10<C-e>
 noremap <C-k> 10<C-y>
-
-
+"node
+nmap <leader>x :!node %<CR>
+m
