@@ -6,6 +6,33 @@ nmap <leader>si :au signify<CR>
 nmap <leader>s <Plug>(easymotion-s2)
 nmap <leader>nt :NERDTreeFind<CR>
 
+"git
+nmap <leader>gtaa :Git add . <cr>
+
+nmap <leader>gta :Git add 
+
+nmap <leader>gtst :Git status<cr>
+
+nmap <leader>gtc :Git commit -m 
+
+nmap <leader>gtps :Git push -u 
+
+nmap <leader>gtpl :Git pull
+
+nmap <leader>gtbr :Git branch ""
+
+nmap <leader>gtbrl :Git branch --list<cr>
+
+
+
+
+
+
+
+
+
+
+
 nmap s :w<CR>
 nmap ss :wq<CR>
 nmap 88 :CocCommand eslint.executeAutofix<CR>
