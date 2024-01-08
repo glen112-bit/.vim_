@@ -1,3 +1,9 @@
+"live-server
+nmap <leader>liv :StartBrowserSync <CR>
+nmap <leader>xxx :KillBrowserSync <CR>
+"terminal 
+nmap <leader> ter :edit term//zsh <CR>
+
 "compare files 
 nmap <leader>com :SignifyDiff[]<CR>
 "sifnify 
@@ -10,6 +16,10 @@ nmap <leader>nt :NERDTreeFind<CR>
 nmap <leader>gtaa :Git add . <cr>
 
 nmap <leader>gta :Git add 
+
+nmap <leader>gtrv :Git remote -v <cr>
+
+nmap <leader>gtlv :Git local -v <cr>
 
 nmap <leader>gtst :Git status<cr>
 
