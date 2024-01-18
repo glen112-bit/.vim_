@@ -1,3 +1,6 @@
+vmap <space> zf
+nmap <space> zd
+nmap <F2> 0v/{<CR>%zf
 "live-server
 nmap <leader>liv :StartBrowserSync <CR>
 nmap <leader>xxx :KillBrowserSync <CR>

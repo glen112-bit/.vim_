@@ -1,5 +1,5 @@
-" let g:UltiSnipsSnippetDirectories=["UltiSnips", 'my_snippets"]
+" let g:UltiSnipsSnippetDirectories=["~/.vim/plugged/vim-snippets/snippets/", "*"]
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsExpandTrigger=".."
+let g:UltiSnipsExpandTrigger=".,."
 
 
