@@ -1,11 +1,9 @@
-vmap <space> zf
-nmap <space> zd
-nmap <F2> 0v/{<CR>%zf
+"
 "live-server
 nmap <leader>liv :StartBrowserSync <CR>
 nmap <leader>xxx :KillBrowserSync <CR>
 "terminal 
-nmap <leader> ter :edit term//zsh <CR>
+" nmap <leader> ter :edit term//zsh <CR>
 
 "compare files 
 nmap <leader>com :SignifyDiff[]<CR>
@@ -71,4 +69,4 @@ noremap <C-j> 10<C-e>
 noremap <C-k> 10<C-y>
 "node
 nmap <leader>x :!node %<CR>
-m
+

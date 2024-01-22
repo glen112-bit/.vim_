@@ -3,7 +3,7 @@
 " ================================================================
 " update airline to use solarized
 
-let g:airline_theme='hard'
+let g:airline_theme='gruvbox'
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_highlighting_cache = 1
