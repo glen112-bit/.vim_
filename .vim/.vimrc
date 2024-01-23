@@ -35,8 +35,8 @@ Plug 'flazz/vim-colorschemes'             " Colorschemes
 "-------------------=== Debbug support ===---------------------
 " Plug 'puremourning/vimspector'
 "-------------------=== Snippets support ===--------------------
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'                 " snippets repo
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'                 " snippets repo
 "-------------------=== Languages support ===-------------------
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'Yggdroot/indentLine'
@@ -72,6 +72,7 @@ call plug#end()                           " required
 " Use homebrew's clangd
 let g:ycm_clangd_binary_path = trim(system('brew --prefix llvm')).'/bin/clangd'
 let mapleader=" "
+
 
 
 "ale
