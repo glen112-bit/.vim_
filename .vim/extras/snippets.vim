@@ -2,7 +2,7 @@
 " - https://github.com/Valloric/YouCompleteMe
 " - https://github.com/nvim-lua/completion-nvim
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/snippets/']
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips']
+" let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/vim-snippets/UltiSnips']
 
 let g:UltiSnipsExpandTrigger=".."
 let g:UltiSnipsJumpForwardTrigger="<c-b>""
