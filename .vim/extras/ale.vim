@@ -74,7 +74,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 
-
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
 packloadall
