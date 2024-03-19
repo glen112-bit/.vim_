@@ -1,0 +1,5 @@
+ let g:EditorConfig_max_line_indicator = "line"
+ let g:EditorConfig_max_line_indicator = "fill"
+ let g:EditorConfig_max_line_indicator = "exceeding"
+ let g:EditorConfig_max_line_indicator = "fillexceeding"
+ let g:EditorConfig_max_line_indicator = "none"

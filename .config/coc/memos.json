@@ -4,52 +4,52 @@
       "http://json.schemastore.org/prettierrc": {
         "etag": "\"079e10ba4ada1:0\"",
         "fileName": "b2ed7a7b6c79e58baf94e4ce160282de.schema.json",
-        "updateTime": 1709053938062
+        "updateTime": 1710865594087
       },
       "https://json.schemastore.org/package.json": {
         "etag": "\"0a624b1156da1:0\"",
         "fileName": "473f72b44c2905902dfbcc770aab7f7a.schema.json",
-        "updateTime": 1709053938482
+        "updateTime": 1710865594551
       },
       "https://json.schemastore.org/ava.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "635f57185b22bce9d3a56c68f5da4ad7.schema.json",
-        "updateTime": 1709053939309
+        "updateTime": 1710865595625
       },
       "https://json.schemastore.org/semantic-release.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "fbc95702ba6eddb3e2de4f52e31ca82a.schema.json",
-        "updateTime": 1709053939272
+        "updateTime": 1710865595624
       },
       "https://json.schemastore.org/prettierrc.json": {
         "etag": "\"079e10ba4ada1:0\"",
         "fileName": "ea5ab10330a3ab77dfd6d00a735b0925.schema.json",
-        "updateTime": 1709053939282
+        "updateTime": 1710865595626
       },
       "https://json.schemastore.org/jscpd.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "22bfc1ab1ff56aae62322f6ce45dab5a.schema.json",
-        "updateTime": 1709053939332
+        "updateTime": 1710865595622
       },
       "https://json.schemastore.org/stylelintrc.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "000bfbdd14d2fb8ec5b0d59bec32ef98.schema.json",
-        "updateTime": 1709053939333
+        "updateTime": 1710865595627
       },
       "https://json.schemastore.org/eslintrc.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "c5064f140d4cfdbf4d6fbe68f68abbb1.schema.json",
-        "updateTime": 1709053939301
+        "updateTime": 1710865595624
       },
       "https://json.schemastore.org/partial-eslint-plugins.json": {
         "etag": "\"09e8ecc624ada1:0\"",
         "fileName": "fc7bb6e733b774ce47be6006f0b75b87.schema.json",
-        "updateTime": 1709053940190
+        "updateTime": 1710865596755
       },
       "https://json.schemastore.org/tsconfig.json": {
         "etag": "\"0f65afa15eda1:0\"",
         "fileName": "a28507e42e8bfd5fba830538461d5db3.schema.json",
-        "updateTime": 1709050523562
+        "updateTime": 1710879449140
       },
       "https://json.schemastore.org/jsconfig.json": {
         "etag": "\"0f65afa15eda1:0\"",

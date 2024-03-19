@@ -6,7 +6,9 @@ let g:ale_fixers = {
 \  'ruby':       ['standardrb'],
 \  'scss':       ['prettier'],
 \  'yml':        ['prettier'],
-\  'jsx':        ['prettier']
+\  'jsx':        ['prettier'],
+\  'tsx':        ['prettier'],
+\  'ts' :        ['prettier']
 \}
 let g:ale_linters = {
 \  'css':        ['csslint'],
@@ -15,7 +17,9 @@ let g:ale_linters = {
 \  'ruby':       ['standardrb'],
 \  'scss':       ['sasslint'],
 \  'yaml':       ['yamllint'],
-\  'jsx':       ['jsxlint']
+\  'jsx':        ['jsxlint'],
+\  'tsx':        ['tsxlint'],
+\  'ts':         ['tslint']
 \}
 let g:ale_linters_explicit = 1
 let g:ale_open_list        = 0

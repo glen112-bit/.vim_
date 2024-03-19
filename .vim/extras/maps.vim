@@ -1,4 +1,8 @@
-"
+"Eslint
+
+nmap <leader>cd :CocCommand  <CR>
+nmap <leader>tt :edit term://zsh<CR>
+
 "live-server
 nmap <leader>liv :StartBrowserSync <CR>
 nmap <leader>xxx :KillBrowserSync <CR>
